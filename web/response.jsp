@@ -1,5 +1,6 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
+
 <%--
     Document   : response
     Created on : Dec 22, 2009, 8:52:57 PM
@@ -15,6 +16,8 @@
 <c:set var="counselorDetails" value="${counselorQuery.rows[0]}"/>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
     "http://www.w3.org/TR/html4/loose.dtd">
 
@@ -26,6 +29,12 @@
     </head>
 
     <body>
+        <jsp:useBean id="mybean" scope="session" class="org.mypackage.hello.NameHandler" />
+        <jsp:setProperty name="mybean" property="name"  />
+        <h1>Hello, <jsp:getProperty name="mybean" property="name" />! 
+            
+        </h1>
+        
         <table>
             <tr>
                 <th colspan="2">${counselorDetails.name}</th>
@@ -38,7 +47,7 @@
                 <td><strong>Counselor: </strong></td>
                 <td><strong>${counselorDetails.first_name} ${counselorDetails.nick_name} ${counselorDetails.last_name}</strong>
                     <br><span style="font-size:smaller; font-style:italic;">
-                    <em>member since: ${counselorDetails.member_since}</em></span></td>
+                        <em>member since: ${counselorDetails.member_since}</em></span></td>
             </tr>
             <tr>
                 <td><strong>Contact Details: </strong></td>
