@@ -22,14 +22,39 @@
    
     </head>
     <body>
-        <h1>   
-            Entry Form
-            <form name="Name input form" action="response.jsp">  
-                <input type="text" name="name"  /> 
-                <input type="submit" value="OK" />
-            </form>
-            
-        </h1>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> 
+                        <h1>   
+                            Entry Form
+                            <form name="Name input form" action="response.jsp">  
+                                <input type="text" name="name"  /> 
+                                <input type="submit" value="OK" />
+                            </form>
+                        </h1>
+                    </td>
+                    <td>
+                        <span >
+                            <form action="loginInputForm" >
+                            Login: <input type="text" name =" loginName"/>
+                            Password: <input type ="texp" name ="loginPass"/>
+                            <input type="submit" value="Login" name="loginBtn" /> <br><br>
+                            <a href="registration.jsp" > Registration </a>
+                        </form>
+                            </span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+       
+        
         <p>
         <p style = "font-style:italic; font-size:200%"> jsp-jQuery example   <br/></p>
                                      
