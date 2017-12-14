@@ -15,14 +15,14 @@ body {
     color: #555;
 }
 
-h1 {
+/*h1 {
     text-align: left;
     letter-spacing: 6px;
     font-size: 1.4em;
     color: #be7429;
     font-weight: normal;
     width: 450px;
-}
+}*/
 
 table {
     width: 580px;
@@ -36,7 +36,8 @@ th {
 }
 
 td {
-    padding: 10px;
+    padding: 30px;
+    
 }
 
 a:link {
@@ -46,7 +47,13 @@ a:link {
 }
 
 a:link:hover {
-   color: #be7429;
+    color:#66ff66;
    font-weight: normal;
    text-decoration: underline;
+}
+
+.td_reg{
+    color:blue;
+/*    text-align: right;*/
+/*    padding: 30px;*/
 }
